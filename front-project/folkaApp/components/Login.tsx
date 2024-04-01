@@ -6,11 +6,6 @@ const Login = ({navigation}) => {
     const [user, setUser] = useState('');
     const [password, setPassword] = useState('');
 
-    const logIn = () => {
-        alert('Usuario: ' + user + '\nPassword: ' + password)
-        navigation.navigate('Home', {user: user})
-    }
-
     return (
         <View style={styles.sectionContainer}>
             <Text h1 style={styles.colorPink}>

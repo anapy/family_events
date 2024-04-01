@@ -1,19 +1,39 @@
 import React, {useState} from 'react';
 import { StyleSheet, View } from 'react-native';
 import { Text } from "react-native-elements";
+import { Calendar } from 'react-native-calendars';
 
 const Home = ({navigation, route}) => {
     const [user, setUser] = useState('Mari Pili')
 
     return (
         <View style={styles.sectionContainer}>
-            <Text h1 style={styles.colorPink}>
-                FolkApp
-            </Text>
             <View>
-            <Text h2 style={styles.colorPink}>
-                Hola {route.params.user}
-            </Text>
+                <Text style={styles.colorPink}>Hola, {route.params.user}</Text>
+            </View>
+            <View>
+                <Calendar 
+                theme={{ 
+                    backgroundColor: '#ffffff', 
+                    calendarBackground: '#CDFADB', 
+                    textSectionTitleColor: '#b6c1cd', 
+                    selectedDayBackgroundColor: '#FF8080', 
+                    selectedDayTextColor: '#ffffff', 
+                    todayTextColor: '#FF8080', 
+                    dayTextColor: '#2d4150', 
+                    textDisabledColor: '#d9e1e8', 
+                    dotColor: '#FF8080', 
+                    selectedDotColor: '#ffffff', 
+                    arrowColor: '#FF8080', 
+                    monthTextColor: '#FF8080', 
+                    indicatorColor: 'blue', 
+                    textDayFontFamily: 'monospace', 
+                    textMonthFontFamily: 'monospace', 
+                    textDayHeaderFontFamily: 'monospace', 
+                    textDayFontSize: 16, 
+                    textMonthFontSize: 16, 
+                    textDayHeaderFontSize: 16 
+                }}></Calendar>
             </View>
         </View>
     );
@@ -38,9 +58,9 @@ const styles = StyleSheet.create({
         color: '#FFCF96',
     },
     colorPink: {
-        margin: 52,
+        margin: 28,
         color: '#FF8080',
-        fontSize: 32,
+        fontSize: 16,
         fontWeight: "bold"
     }
 });
